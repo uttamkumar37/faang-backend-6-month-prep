@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: java-backend-examples
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Replace with your actual JWKS URI in a real deployment
+          # jwk-set-uri: https://your-auth-server/.well-known/jwks.json
+          issuer-uri: http://localhost:9000
+
+# ── Resilience4j ───────────────────────────────────────────────────────
+resilience4j:
+  circuitbreaker:
+    instances:
+      inventoryService:
+        sliding-window-size: 10
+        failure-rate-threshold: 50          # open after 50% failures
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 3
+        register-health-indicator: true
+  retry:
+    instances:
+      inventoryService:
+        max-attempts: 3
+        wait-duration: 500ms
+        retry-exceptions:
+          - java.io.IOException
+          - java.net.ConnectException
+  timelimiter:
+    instances:
+      inventoryService:
+        timeout-duration: 2s
+  bulkhead:
+    instances:
+      inventoryService:
+        max-concurrent-calls: 20
+        max-wait-duration: 100ms
+
+# ── Actuator / Observability ───────────────────────────────────────────
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  tracing:
+    sampling:
+      probability: 1.0   # 100% sampling — reduce to 0.1 in production
+
+# ── Logging ───────────────────────────────────────────────────────────
+logging:
+  level:
+    com.faangprep: DEBUG
+    io.github.resilience4j: INFO
