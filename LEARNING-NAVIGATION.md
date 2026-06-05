@@ -40,7 +40,7 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Dynamic programming | `02-dsa/code/12-dp/11-dynamic-programming.md` | `02-dsa/code/12-dp/DynamicProgrammingPatterns.java` | — |
 | Trie and union-find | `02-dsa/code/13-trie/12-trie-union-find.md` | `02-dsa/code/13-trie/TrieAndUnionFind.java` | — |
 | Intervals | `02-dsa/code/14-intervals/14-intervals.md` | `02-dsa/code/14-intervals/IntervalPatterns.java` | `02-dsa/code/14-intervals/IntervalPatternsTest.java` |
-| SQL/backend database practice | `02-dsa/code/15-sql/README.md` | `02-dsa/code/15-sql/schema-practice.sql` and `02-dsa/code/15-sql/answers.md` | Practice queries in `SqlPracticeQuestions.md` |
+| SQL/backend database practice | `02-dsa/code/15-sql/README.md` | `02-dsa/code/15-sql/schema-practice.sql`, `06-deadlocks-and-locking.md`, `07-database-normalization.md`, and `answers.md` | Practice queries in `SqlPracticeQuestions.md` |
 
 ## System design
 
@@ -107,7 +107,9 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Kafka lag | `01-java-backend/code/production-debugging/06-kafka-lag-debugging.md` | `IncidentDebuggingPlaybook.java` |
 | Redis/cache issue | `01-java-backend/code/production-debugging/07-redis-cache-issue-debugging.md` | `IncidentDebuggingPlaybook.java` |
 | Thread pool exhaustion | `01-java-backend/code/production-debugging/08-thread-pool-exhaustion.md` | `IncidentDebuggingPlaybook.java` |
-| Postmortem | `01-java-backend/code/production-debugging/09-incident-postmortem-template.md` | Use after every incident mock |
+| Connection pool exhaustion | `01-java-backend/code/production-debugging/09-connection-pool-exhaustion.md` | `IncidentDebuggingPlaybook.java` |
+| GC pressure | `01-java-backend/code/production-debugging/10-gc-pressure-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Postmortem | `01-java-backend/code/production-debugging/11-incident-postmortem-template.md` | Use after every incident mock |
 
 ## Behavioral story path
 

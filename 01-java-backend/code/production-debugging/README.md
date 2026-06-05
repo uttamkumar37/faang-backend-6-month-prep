@@ -16,11 +16,13 @@ Provide interview-ready playbooks for diagnosing Java backend incidents under pr
 | High CPU | 02-high-cpu-debugging.md |
 | Memory leak and GC pressure | 03-memory-leak-debugging.md |
 | Slow APIs and p99 latency | 04-slow-api-debugging.md |
-| Database latency and connection pools | 05-database-latency-debugging.md |
+| Database latency | 05-database-latency-debugging.md |
 | Kafka lag | 06-kafka-lag-debugging.md |
 | Redis/cache issues | 07-redis-cache-issue-debugging.md |
 | Thread pool exhaustion | 08-thread-pool-exhaustion.md |
-| Postmortem | 09-incident-postmortem-template.md |
+| Connection pool exhaustion | 09-connection-pool-exhaustion.md |
+| GC pressure | 10-gc-pressure-debugging.md |
+| Postmortem | 11-incident-postmortem-template.md |
 | Java examples | IncidentDebuggingPlaybook.java |
 
 ## Interview Answer Shape

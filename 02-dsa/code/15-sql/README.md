@@ -17,6 +17,8 @@ Practice backend SQL scenarios that appear in SDE-II interviews: joins, aggregat
 | 03-indexing-query-plans.md | indexes, EXPLAIN, covering indexes |
 | 04-transactions-isolation.md | ACID, isolation, locks, deadlocks |
 | 05-pagination-and-n-plus-one.md | keyset pagination and ORM query traps |
+| 06-deadlocks-and-locking.md | row locks, deadlock prevention, retry strategy |
+| 07-database-normalization.md | schema design, constraints, denormalization trade-offs |
 | SqlPracticeQuestions.md | Interview questions |
 | schema-practice.sql | Practice schema and seed data |
 | answers.md | Reference answers |

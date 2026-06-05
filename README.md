@@ -130,7 +130,9 @@ faang-backend-6-month-prep/
 │       │   ├── 06-kafka-lag-debugging.md
 │       │   ├── 07-redis-cache-issue-debugging.md
 │       │   ├── 08-thread-pool-exhaustion.md
-│       │   ├── 09-incident-postmortem-template.md
+│       │   ├── 09-connection-pool-exhaustion.md
+│       │   ├── 10-gc-pressure-debugging.md
+│       │   ├── 11-incident-postmortem-template.md
 │       │   └── IncidentDebuggingPlaybook.java
 │
 │       └── application.yml

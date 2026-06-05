@@ -9,16 +9,16 @@ Convert repeated mistakes into scheduled repairs instead of vague weakness notes
 - Mark pass or fail using the criteria in the file, then pick one recovery action.
 
 ## Mistake Categories
-| Category | Symptoms | Repair |
+| Required category | Symptoms | Repair |
 |---|---|---|
-| Pattern miss | Used DFS where BFS shortest path was needed | Re-solve 3 similar problems |
-| Edge case miss | Empty input, duplicate keys, overflow, off-by-one | Add edge checklist before coding |
-| Complexity miss | O(n^2) accepted mentally for large input | State constraints before algorithm |
-| Java syntax/API | Comparator, equals/hashCode, generics, streams | Write tiny Java drill |
-| Data structure misuse | Heap vs TreeMap vs deque confusion | Record decision rule |
-| Design gap | No failure mode, no SLO, no data model | Redo design in 30 minutes |
-| Backend depth gap | Knows API but not internals | Trace runtime behavior |
-| Communication gap | Silent coding, rambling, late assumptions | Practice 5-minute explanation |
+| DSA logic error | Invariant is wrong, pointer movement is wrong, recursion state is mutated incorrectly | Re-solve the same problem from scratch and write the invariant first |
+| DSA pattern recognition error | Used DFS where BFS shortest path was needed, missed binary search on answer, missed monotonic stack | Re-solve 3 adjacent pattern problems and write the trigger rule |
+| Edge case miss | Empty input, duplicate keys, overflow, one-element input, all-negative values, off-by-one | Add an edge-case checklist before coding and test it manually |
+| Time complexity issue | Chose O(n^2) under large constraints, used nested scans where a map/heap/deque was needed | State constraints and target complexity before the algorithm |
+| Java syntax/design issue | Comparator, equals/hashCode, generics, stream misuse, mutable keys, poor class boundaries | Write a tiny Java drill and explain the API/design decision |
+| System design trade-off miss | No SLO, no failure mode, weak data model, no consistency trade-off, no capacity estimate | Redo the design in 30 minutes using requirements, scale, data, APIs, bottlenecks |
+| Communication issue | Silent coding, rambling, late assumptions, no checkpoints, unclear trade-off explanation | Practice 5-minute explanation with explicit assumptions and checkpoints |
+| Behavioral answer weakness | No ownership, no measurable result, blames others, weak learning, no customer/business impact | Rewrite in STAR format with impact, trade-off, and lesson learned |
 
 ## Log Template
 | Date | Round type | Problem/topic | Mistake category | Root cause | Correct approach | Re-test date | Fixed? |
