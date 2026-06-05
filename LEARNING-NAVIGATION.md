@@ -20,6 +20,7 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Observability | `01-java-backend/code/springboot/12-observability.md` | `01-java-backend/code/springboot/ObservabilityConfig.java` | — |
 | Testing strategy | `01-java-backend/code/testing-delivery/01-testing-strategy.md` | `01-java-backend/code/testing-delivery/TestingAndReleasePatterns.java` | — |
 | CI/CD and release engineering | `01-java-backend/code/testing-delivery/02-ci-cd-release-engineering.md` | `01-java-backend/code/testing-delivery/TestingAndReleasePatterns.java` | — |
+| Production debugging | `01-java-backend/code/production-debugging/README.md` | `01-java-backend/code/production-debugging/IncidentDebuggingPlaybook.java` | Use each incident playbook as a drill |
 
 ## DSA
 
@@ -39,6 +40,7 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Dynamic programming | `02-dsa/code/12-dp/11-dynamic-programming.md` | `02-dsa/code/12-dp/DynamicProgrammingPatterns.java` | — |
 | Trie and union-find | `02-dsa/code/13-trie/12-trie-union-find.md` | `02-dsa/code/13-trie/TrieAndUnionFind.java` | — |
 | Intervals | `02-dsa/code/14-intervals/14-intervals.md` | `02-dsa/code/14-intervals/IntervalPatterns.java` | `02-dsa/code/14-intervals/IntervalPatternsTest.java` |
+| SQL/backend database practice | `02-dsa/code/15-sql/README.md` | `02-dsa/code/15-sql/schema-practice.sql` and `02-dsa/code/15-sql/answers.md` | Practice queries in `SqlPracticeQuestions.md` |
 
 ## System design
 
@@ -58,6 +60,20 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Distributed systems internals | `03-system-design/code/11-distributed-systems-internals/01-distributed-systems-internals.md` | `03-system-design/code/11-distributed-systems-internals/DistributedSystemsInternalsExamples.java` | — |
 | Cloud and Kubernetes | `03-system-design/code/12-cloud-kubernetes/01-docker-kubernetes-cloud.md` | `03-system-design/code/12-cloud-kubernetes/CloudPlatformPatterns.java` | — |
 
+## Low-level design / machine coding
+
+| Topic | Read first | Study next | Validation |
+|---|---|---|---|
+| LLD principles | `06-low-level-design/01-lld-principles.md` | `06-low-level-design/02-solid-design.md` | Explain one design in 10 minutes |
+| Design patterns | `06-low-level-design/03-design-patterns-in-interviews.md` | Existing Java design examples | Identify real variation points |
+| Parking lot | `06-low-level-design/04-parking-lot.md` | `06-low-level-design/code/parkinglot/ParkingLotDesign.java` | Park/exit/no-spot test ideas |
+| Splitwise | `06-low-level-design/05-splitwise.md` | `06-low-level-design/code/splitwise/SplitwiseDesign.java` | Equal/exact/mismatch test ideas |
+| Rate limiter | `06-low-level-design/06-rate-limiter-lld.md` | `06-low-level-design/code/ratelimiter/RateLimiterDesign.java` | Burst/refill/concurrency test ideas |
+| Cache | `06-low-level-design/07-cache-lld.md` | `06-low-level-design/code/cache/CacheDesign.java` | TTL/LRU/capacity test ideas |
+| Logging framework | `06-low-level-design/08-logging-framework.md` | `06-low-level-design/code/logging/LoggingFrameworkDesign.java` | Level/filter/appender test ideas |
+| Elevator | `06-low-level-design/09-elevator-system.md` | `06-low-level-design/code/elevator/ElevatorSystemDesign.java` | Scheduling/state transition test ideas |
+| BookMyShow | `06-low-level-design/10-bookmyshow.md` | `06-low-level-design/code/bookmyshow/BookMyShowDesign.java` | Seat lock/expiry/concurrency test ideas |
+
 ## AI / GenAI backend
 
 | Topic | Read first | Study next | Validation |
@@ -69,9 +85,73 @@ Use this file as the fastest path from topic to material. Each row points to the
 | Spring AI integration | `04-ai-genai/code/04-spring-ai/04-spring-ai.md` | `04-ai-genai/code/04-spring-ai/SpringAiIntegrationExample.java` | — |
 | Production AI backend | `04-ai-genai/code/06-production/06-production-ai-backend.md` | `04-ai-genai/code/06-production/ProductionAiBackendExample.java` | — |
 
+## Tracking, behavioral, company, and evaluation
+
+| Area | Start here | Use weekly/monthly |
+|---|---|---|
+| Interview tracking | `06-interview-tracker/README.md` | `weekly-progress.md`, `mistake-log.md`, scorecards, `mock-feedback.md` |
+| Behavioral leadership | `07-behavioral-leadership/README.md` | `story-bank.md` plus one story practice every week |
+| Company-specific strategy | `08-company-specific/README.md` | Use in month 5 and month 6 for target companies |
+| Monthly evaluation | `09-monthly-evaluation/README.md` | Complete the matching month gate before advancing |
+| Final SDE-II bar | `SDE-II-READINESS-BAR.md` | Score monthly and during final readiness review |
+
+## Production debugging drills
+
+| Incident type | Playbook | Java reference |
+|---|---|---|
+| General triage | `01-java-backend/code/production-debugging/01-prod-debugging-checklist.md` | `01-java-backend/code/production-debugging/IncidentDebuggingPlaybook.java` |
+| High CPU | `01-java-backend/code/production-debugging/02-high-cpu-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Memory leak / GC pressure | `01-java-backend/code/production-debugging/03-memory-leak-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Slow API | `01-java-backend/code/production-debugging/04-slow-api-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Database latency | `01-java-backend/code/production-debugging/05-database-latency-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Kafka lag | `01-java-backend/code/production-debugging/06-kafka-lag-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Redis/cache issue | `01-java-backend/code/production-debugging/07-redis-cache-issue-debugging.md` | `IncidentDebuggingPlaybook.java` |
+| Thread pool exhaustion | `01-java-backend/code/production-debugging/08-thread-pool-exhaustion.md` | `IncidentDebuggingPlaybook.java` |
+| Postmortem | `01-java-backend/code/production-debugging/09-incident-postmortem-template.md` | Use after every incident mock |
+
+## Behavioral story path
+
+| Competency | File | When to practice |
+|---|---|---|
+| STAR structure | `07-behavioral-leadership/01-star-method.md` | Month 1 and before every mock |
+| Ownership | `07-behavioral-leadership/02-ownership-stories.md` | Month 1 onward |
+| Conflict | `07-behavioral-leadership/03-conflict-resolution.md` | Month 2 onward |
+| Technical leadership | `07-behavioral-leadership/04-technical-leadership.md` | Month 2 onward |
+| Production incident | `07-behavioral-leadership/05-production-incident-story.md` | Month 3 onward |
+| Failure and learning | `07-behavioral-leadership/06-failure-and-learning.md` | Month 4 onward |
+| Mentoring | `07-behavioral-leadership/07-mentoring-and-collaboration.md` | Month 2 onward |
+| Ambiguity | `07-behavioral-leadership/08-ambiguity-and-decision-making.md` | Month 1 onward |
+| Story inventory | `07-behavioral-leadership/story-bank.md` | Update weekly |
+
+## Company-specific path
+
+| Company | File | Best use |
+|---|---|---|
+| Google | `08-company-specific/google.md` | Coding communication, scalable design, ambiguity |
+| Microsoft | `08-company-specific/microsoft.md` | Practical trade-offs, collaboration, customer focus |
+| Amazon | `08-company-specific/amazon.md` | Leadership Principles, ownership, operational excellence |
+| Uber | `08-company-specific/uber.md` | Marketplace scale, real-time systems, reliability |
+| Flipkart | `08-company-specific/flipkart.md` | DSA, LLD/machine coding, commerce backend |
+| Atlassian | `08-company-specific/atlassian.md` | Code design, system design, values, collaboration |
+| LinkedIn | `08-company-specific/linkedin.md` | Feed/search/graph systems and product impact |
+| Cross-company patterns | `08-company-specific/interview-patterns.md` | Before choosing target companies |
+
+## Monthly gates
+
+| Month | Gate file | Required decision |
+|---|---|---|
+| Month 1 | `09-monthly-evaluation/month-1-gate.md` | Fundamentals pass/fail |
+| Month 2 | `09-monthly-evaluation/month-2-gate.md` | Java, concurrency, LLD start |
+| Month 3 | `09-monthly-evaluation/month-3-gate.md` | Distributed systems and debugging |
+| Month 4 | `09-monthly-evaluation/month-4-gate.md` | Advanced design, DP, AI/RAG |
+| Month 5 | `09-monthly-evaluation/month-5-gate.md` | Interview simulation and company strategy |
+| Month 6 | `09-monthly-evaluation/month-6-final-readiness.md` | Final SDE-II readiness |
+
 ## Recommended operating order
 
 1. Follow `08-6-month-study-plan.md` for sequencing.
 2. Use this file for exact navigation.
-3. Use `09-readiness-checklist.md` monthly.
+3. Use `06-interview-tracker/weekly-progress.md` every week.
 4. Use `10-mock-interview-bank.md` weekly.
+5. Use `09-monthly-evaluation/` and `09-readiness-checklist.md` monthly.
+6. Use `08-company-specific/` and `SDE-II-READINESS-BAR.md` heavily in months 5 and 6.

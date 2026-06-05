@@ -9,8 +9,29 @@
 2. For each topic, open the numbered markdown note that sits beside the code in that module, then study and re-implement the Java example.
 3. Use `10-mock-interview-bank.md` for weekly mock questions.
 4. Build 2 flagship projects from `05-projects/`.
-5. Run the readiness self-score in `09-readiness-checklist.md` monthly.
-6. Use `LEARNING-NAVIGATION.md` when you want a direct map from topic to theory note, code file, and test.
+5. Track execution every week in `06-interview-tracker/`.
+6. Practice behavioral leadership stories from `07-behavioral-leadership/` every month.
+7. Add LLD practice from `06-low-level-design/` starting in month 2.
+8. Add production debugging drills from `01-java-backend/code/production-debugging/` starting in month 3.
+9. Run monthly gates from `09-monthly-evaluation/` before advancing.
+10. Use `08-company-specific/` in months 5 and 6 for final company targeting.
+11. Run the readiness self-score in `09-readiness-checklist.md` and `SDE-II-READINESS-BAR.md` monthly.
+12. Use `LEARNING-NAVIGATION.md` when you want a direct map from topic to theory note, code file, and test.
+
+---
+
+## Senior Backend Additions
+
+| Area | Start here | Why it matters |
+|---|---|---|
+| Interview tracking | [06-interview-tracker/README.md](06-interview-tracker/README.md) | Weekly progress, mistake log, scorecards, mock feedback, monthly review |
+| Behavioral leadership | [07-behavioral-leadership/README.md](07-behavioral-leadership/README.md) | STAR stories for ownership, conflict, incidents, leadership, failure, mentoring, ambiguity |
+| Production debugging | [01-java-backend/code/production-debugging/README.md](01-java-backend/code/production-debugging/README.md) | JVM/Linux incident playbooks for CPU, memory, APIs, DB, Kafka, Redis, thread pools |
+| SQL/database practice | [02-dsa/code/15-sql/README.md](02-dsa/code/15-sql/README.md) | Joins, windows, indexing, transactions, pagination, N+1 |
+| Low-level design | [06-low-level-design/README.md](06-low-level-design/README.md) | Machine-coding and object design drills with Java skeletons |
+| Company strategy | [08-company-specific/README.md](08-company-specific/README.md) | Google, Microsoft, Amazon, Uber, Flipkart, Atlassian, LinkedIn prep focus |
+| Monthly gates | [09-monthly-evaluation/README.md](09-monthly-evaluation/README.md) | Pass/fail criteria and recovery plans for each month |
+| Final readiness bar | [SDE-II-READINESS-BAR.md](SDE-II-READINESS-BAR.md) | 10/10 SDE-II readiness definition across 16 areas |
 
 ---
 
@@ -99,6 +120,18 @@ faang-backend-6-month-prep/
 │       │   ├── 01-testing-strategy.md
 │       │   ├── 02-ci-cd-release-engineering.md
 │       │   └── TestingAndReleasePatterns.java
+│       ├── production-debugging/
+│       │   ├── README.md
+│       │   ├── 01-prod-debugging-checklist.md
+│       │   ├── 02-high-cpu-debugging.md
+│       │   ├── 03-memory-leak-debugging.md
+│       │   ├── 04-slow-api-debugging.md
+│       │   ├── 05-database-latency-debugging.md
+│       │   ├── 06-kafka-lag-debugging.md
+│       │   ├── 07-redis-cache-issue-debugging.md
+│       │   ├── 08-thread-pool-exhaustion.md
+│       │   ├── 09-incident-postmortem-template.md
+│       │   └── IncidentDebuggingPlaybook.java
 │
 │       └── application.yml
 │
@@ -117,7 +150,8 @@ faang-backend-6-month-prep/
 │       ├── 11-backtracking/    10-backtracking.md, BacktrackingPatterns.java, questions.md
 │       ├── 12-dp/              11-dynamic-programming.md, DynamicProgrammingPatterns.java, questions.md
 │       ├── 13-trie/            12-trie-union-find.md, TrieAndUnionFind.java, questions.md
-│       └── 14-intervals/       14-intervals.md, IntervalPatterns.java, IntervalPatternsTest.java, questions.md
+│       ├── 14-intervals/       14-intervals.md, IntervalPatterns.java, IntervalPatternsTest.java, questions.md
+│       └── 15-sql/             SQL joins, windows, indexes, transactions, pagination, schema, answers
 │
 ├── 03-system-design/
 │   ├── designs/
@@ -154,37 +188,103 @@ faang-backend-6-month-prep/
 │       ├── 05-prompt-engineering/ 05-prompt-engineering.md
 │       └── 06-production/         06-production-ai-backend.md, ProductionAiBackendExample.java
 │
-└── 05-projects/
-    ├── 01-ai-support-copilot/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 02-order-processing-platform/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 03-incident-intelligence-backend/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 04-rate-limiter-service/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 05-distributed-job-scheduler/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 06-social-media-feed-system/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 07-typeahead-search-service/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 08-realtime-fraud-detection/
-    │   ├── README.md
-    │   └── architecture.md
-    ├── 09-live-leaderboard-gaming-backend/
-    │   ├── README.md
-    │   └── architecture.md
-    └── 10-multitenant-billing-engine/
-        ├── README.md
-        └── architecture.md
+├── 05-projects/
+│   ├── 01-ai-support-copilot/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 02-order-processing-platform/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 03-incident-intelligence-backend/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 04-rate-limiter-service/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 05-distributed-job-scheduler/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 06-social-media-feed-system/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 07-typeahead-search-service/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 08-realtime-fraud-detection/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── 09-live-leaderboard-gaming-backend/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   └── 10-multitenant-billing-engine/
+│       ├── README.md
+│       └── architecture.md
+│
+├── 06-interview-tracker/
+│   ├── README.md
+│   ├── weekly-progress.md
+│   ├── mistake-log.md
+│   ├── dsa-pattern-scorecard.md
+│   ├── system-design-scorecard.md
+│   ├── java-backend-scorecard.md
+│   ├── project-progress-tracker.md
+│   ├── mock-feedback.md
+│   └── monthly-review-template.md
+│
+├── 06-low-level-design/
+│   ├── README.md
+│   ├── 01-lld-principles.md
+│   ├── 02-solid-design.md
+│   ├── 03-design-patterns-in-interviews.md
+│   ├── 04-parking-lot.md
+│   ├── 05-splitwise.md
+│   ├── 06-rate-limiter-lld.md
+│   ├── 07-cache-lld.md
+│   ├── 08-logging-framework.md
+│   ├── 09-elevator-system.md
+│   ├── 10-bookmyshow.md
+│   └── code/
+│       ├── parkinglot/ParkingLotDesign.java
+│       ├── splitwise/SplitwiseDesign.java
+│       ├── ratelimiter/RateLimiterDesign.java
+│       ├── cache/CacheDesign.java
+│       ├── logging/LoggingFrameworkDesign.java
+│       ├── elevator/ElevatorSystemDesign.java
+│       └── bookmyshow/BookMyShowDesign.java
+│
+├── 07-behavioral-leadership/
+│   ├── README.md
+│   ├── 01-star-method.md
+│   ├── 02-ownership-stories.md
+│   ├── 03-conflict-resolution.md
+│   ├── 04-technical-leadership.md
+│   ├── 05-production-incident-story.md
+│   ├── 06-failure-and-learning.md
+│   ├── 07-mentoring-and-collaboration.md
+│   ├── 08-ambiguity-and-decision-making.md
+│   └── story-bank.md
+│
+├── 08-company-specific/
+│   ├── README.md
+│   ├── google.md
+│   ├── microsoft.md
+│   ├── amazon.md
+│   ├── uber.md
+│   ├── flipkart.md
+│   ├── atlassian.md
+│   ├── linkedin.md
+│   └── interview-patterns.md
+│
+├── 09-monthly-evaluation/
+│   ├── README.md
+│   ├── month-1-gate.md
+│   ├── month-2-gate.md
+│   ├── month-3-gate.md
+│   ├── month-4-gate.md
+│   ├── month-5-gate.md
+│   └── month-6-final-readiness.md
+│
+└── SDE-II-READINESS-BAR.md
 ```
 
 ---
@@ -196,9 +296,24 @@ faang-backend-6-month-prep/
 | DSA coding practice | 10-12 |
 | Java + backend theory | 5-6 |
 | System design | 4-5 |
+| LLD / machine coding | 2-3 |
 | AI/GenAI backend | 4-5 |
 | Project building | 6-8 |
-| Resume + behavioral | 2 |
+| Production debugging drills | 1-2 |
+| Resume + behavioral | 2-3 |
+| Tracking, review, and mocks | 2 |
+
+## Weekly Operating Instructions
+
+- Monday: choose the DSA patterns, Java/backend topic, design prompt, LLD/problem area, project artifact, and behavioral story for the week.
+- Wednesday: update [weekly-progress.md](06-interview-tracker/weekly-progress.md) and cut scope if execution is drifting.
+- Sunday: run one mock or timed set, update [mistake-log.md](06-interview-tracker/mistake-log.md), score the week, and schedule repairs.
+
+## Monthly Evaluation Reminders
+
+- End of every month: complete the matching gate in [09-monthly-evaluation/](09-monthly-evaluation/README.md).
+- Do not advance on calendar alone; a month passes only when the gate score is 75+ and no critical area is below the file threshold.
+- Month 5 and month 6 must include company-specific revision, behavioral story rehearsal, and final SDE-II readiness scoring.
 
 ---
 
@@ -229,3 +344,7 @@ For every topic:
 - Explain JVM, concurrency, Spring Boot, Kafka, Redis, and CAP theorem deeply.
 - Build AI-enabled backend services with RAG pipelines.
 - Present your work as an ownership-driven senior backend engineer.
+- Complete 8+ LLD/machine-coding designs with Java skeletons and test cases.
+- Debug common production incidents using JVM/Linux commands, metrics, logs, and postmortems.
+- Pass company-targeted mock loops for at least 2 target companies.
+- Meet the final SDE-II bar in [SDE-II-READINESS-BAR.md](SDE-II-READINESS-BAR.md).
